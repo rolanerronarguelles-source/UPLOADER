@@ -6,15 +6,15 @@
         <svg class="w-4 h-4 transform group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
         </svg>
-        <span>Back to Repositories</span>
+        <span>Back to Albums</span>
     </a>
 
     <div class="bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden">
         <div class="bg-slate-950 px-8 py-6 text-slate-100 border-b border-slate-900">
             <h2 class="text-2xl font-bold tracking-tight text-white">
-                {% if object %}Modify Container Resources{% else %}Configure Storage Node{% endif %}
+                {% if object %}Edit Album Details{% else %}Create New Album{% endif %}
             </h2>
-            <p class="text-slate-400 text-xs font-light mt-1">Specify operational metrics to securely synchronize media stream states with infrastructure buckets.</p>
+            <p class="text-slate-400 text-xs font-light mt-1">Provide a title, description, and cover image to update your media collection.</p>
         </div>
 
         <form method="post" enctype="multipart/form-data" class="p-8 space-y-6">
@@ -22,7 +22,7 @@
 
             {% if form.errors %}
                 <div class="bg-rose-500/10 border border-rose-500/30 text-rose-400 px-4 py-3 rounded-xl text-xs font-medium">
-                    Structural compilation alert: Validation anomalies discovered within submitted criteria fields.
+                    Please correct the errors in the fields below before submitting.
                 </div>
             {% endif %}
 
@@ -32,10 +32,10 @@
 
             <div class="pt-4 border-t border-slate-800/80 flex items-center justify-end space-x-4">
                 <a href="{% url 'album-list' %}" class="bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-300 text-sm font-semibold px-5 py-2.5 rounded-xl transition">
-                    Abort
+                    Cancel
                 </a>
                 <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold px-6 py-2.5 rounded-xl shadow-lg shadow-indigo-600/20 transition-all duration-150 hover:-translate-y-0.5">
-                    Commit Pipeline Changes
+                    Save Changes
                 </button>
             </div>
         </form>

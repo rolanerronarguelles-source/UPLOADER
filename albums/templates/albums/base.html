@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UPLOADER — Premium Media Preservation</title>
+    <title>UPLOADER</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -44,12 +44,12 @@
                     <form action="{% url 'logout' %}" method="post" class="inline">
                         {% csrf_token %}
                         <button type="submit" class="text-sm font-medium text-slate-400 hover:text-rose-400 transition-colors duration-200">
-                            Disconnect
+                            Log out
                         </button>
                     </form>
                 {% else %}
                     <a href="{% url 'login' %}" class="bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-indigo-600/20 hover:-translate-y-0.5">
-                        Access Vault
+                        Sign in
                     </a>
                 {% endif %}
             </div>
